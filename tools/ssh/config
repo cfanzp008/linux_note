@@ -1,0 +1,5 @@
+Host server1
+  HostName 192.168.2.128
+  Port 22
+  User root
+  IdentityFile ~/.ssh/id_rsa

@@ -1,0 +1,5 @@
+text/html; w3m -o document_charse=%{charset} %s; nametemplate=%s.html
+text/html; w3m -dump -o document_charse=%{charset} %s; nametemplate=%s.html; copiousoutput
+#image/*; fim %s; /dev/null
+#image/*; w3m %s; /dev/null
+image/*; feh %s; /dev/null

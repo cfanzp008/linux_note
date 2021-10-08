@@ -1,0 +1,70 @@
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{SimSun}
+#+TITLE: emacs
+* emacs 配置
+** 浏览器 eww
+**** 设置代理
+   - https://gist.github.com/et2010/5d6edeeb284e33343d0a
+** IRC
+*** cmd
+    1. https://blog.csdn.net/lujun9972/article/details/46002861
+    2. cfanzp_008
+    3. https://irc.gitter.im/
+    4. https://www.cnblogs.com/zqifa/p/irc-1.html
+    5. ios irccloud:https://github.com/irccloud/ios
+    6. irc.freenode.net:6667
+    7. irssi:irssi -c [server] -p [port] -n [nickname]
+    8. irssi:/connect server port
+** 资源列表
+*** org-mode 参考手册
+    官方地址:https://orgmode.org/manual/index.html
+*** 子龙山人
+**** github
+     init.el [[https://github.com/zilongshanren/spacemacs-private/blob/develop/init.el]]
+     spacemacs-rocks https://github.com/emacs-china/Spacemacs-rocks
+     GTD: https://blog.csdn.net/u011729865/article/details/54236547/#spacemacs%E7%9A%84org-mode%E5%BF%AB%E6%8D%B7%E9%94%AE
+**** 视频教程
+     url https://github.com/emacs-china/Spacemacs-rocks
+*** emacs-china
+**** 日程管理
+     - url https://github.com/emacs-china/hello-emacs/blob/master/Emacs%E4%B8%AD%E7%9A%84%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86.org
+*** 其它
+**** GTD
+     - 将 Emacs Org mode 用于 GTD 任务管理:https://www.cnblogs.com/quantumman/p/10808374.html
+**** 如何利用 Emacs 进行个人时间管理(GTD)
+     - url http://www.mamicode.com/info-detail-2316948.html
+     - 什么是番茄工作法
+     - GTD 配置
+**** Org-mode,最强的任务管理利器，没有之一(GTD)
+     - url https://www.cnblogs.com/holbrook/archive/2012/04/14/2447754.html
+**** Org Agenda
+     - GTD 工具的核心功能就是 Agenda 功能
+     - 可以实时查看自己有哪些任务，以及每个任务完成进度
+     - 可以通过 M-x org-agenda 来打开
+**** emacs
+     - 一年成为 Emacs 高手 https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org
+** spacemacs org-mode 快捷键
+*** table 的使用
+    - url：https://blog.csdn.net/csfreebird/article/details/45274191
+*** 快捷键列表
+    - url:https://www.dazhuanlan.com/2019/12/11/5df06eb134a46/
+
+
+* GTD
+** GTD 原则
+*** 收集
+*** 处理
+*** 管理
+*** 执行
+*** 回顾
+** 导出
+*** 导出 pdf
+**** 导出快捷键 C-c,C-e l o/p
+**** 安装 LaTeX
+      1. manjaro: sudo pacman -S texlive-most texlive-lang
+      2. 只安装中文环境:sudo pacman -S texlive-langchinese
+      3. 帮助:https://www.jianshu.com/p/c4b8072a28f3
+**** 导出 pdf 不显示中文解决方案
+      1. 使用 xelatex
+      2. 参考 url https://tieba.baidu.com/p/3522363035?red_tag=0169026162
+         

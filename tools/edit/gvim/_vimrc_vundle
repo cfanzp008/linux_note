@@ -1,0 +1,175 @@
+set ruler                       " show the cursor position all the time
+set laststatus=2                " make the last line where the status is two lines deep so you can see status always
+set backspace=indent,eol,start  " make that backspace key work the way it should
+set nocompatible                " vi compatible is LAME
+set showmode                    " show the current mode
+syntax on                       " turn syntax highlighting on by default
+
+"set fdm=indent
+
+"行号{
+set nu!
+"}
+
+"设置字体{
+"set guifont=Consolas:h9:cANSI
+set guifont=Consolas:h10
+"set guifont=Courier\ New:h10:cANSI Consolas:h10:cANSI
+"set guifont=Fixedsys:h12
+"set guifont=Source\ Code\ Pro:h9
+"}
+
+"设置编码{
+set encoding=utf-8
+"set fileencodings=utf-8,chinese
+set termencoding=utf-8
+if has("win32")
+    set fileencoding=chinese
+else
+    set fileencoding=utf-8
+endif
+language messages zh_CN.utf-8  "解决consle输出乱码
+
+" ======= for windows ==============================
+" rm menu
+set guioptions-=m
+set guioptions-=T
+
+"解决菜单乱码
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+
+set diffexpr=MyDiff()
+function MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg1 = substitute(arg1, '!', '\!', 'g')
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg2 = substitute(arg2, '!', '\!', 'g')
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let arg3 = substitute(arg3, '!', '\!', 'g')
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      if empty(&shellxquote)
+        let l:shxq_sav = ''
+        set shellxquote&
+      endif
+      let cmd = '"' . $VIMRUNTIME . '\diff"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  let cmd = substitute(cmd, '!', '\!', 'g')
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
+  if exists('l:shxq_sav')
+    let &shellxquote=l:shxq_sav
+  endif
+endfunction
+
+"===========================================================
+"vundle start
+set nocompatible " be iMproved, required
+filetype off                  " required
+
+" 将Vundle插件的目录添加到gvim的运行时变量中
+set rtp+=$HOME/.vim/bundle/Vundle.vim/
+call vundle#begin('$USERPROFILE/.vim/bundle/')
+" All of your Plugins must be added before the following line
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Tagbar'
+Plugin 'git://github.com/rking/ag.vim.git'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+"vundle end
+"============================================================
+let g:ag_prg="ag.exe --column"
+let g:ag_working_path_mode='r'
+
+" ctrlp
+"ctrlp{  
+let g:ctrlp_cmd = 'CtrlP'  
+set wildignore+=*/Build-vc89/*,*.o,*.exe,*.git,*.pdb,*.bak,*.so,*.a
+let g:ctrlp_by_filename = 1 " only lookup file name  
+let g:ctrlp_max_height = 15  
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_cache_dir = $HOME.'/.ctrlp/cache/'  
+let g:ctrlp_working_path_mode = 'ra'  
+let g:ctrlp_custom_ignore = {  
+   \ 'dir':  '\v[\/]\.(git|hg|svn)$',  
+   \ 'file': '\v\.(exe|so|dll|bak|gds|lib|suo|exp)$',  
+     \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',  
+   \ }  
+
+
+"ctags{
+set tags=tags;
+set autochdir
+nnoremap <silent> <F12> :A<CR>
+":set grepprg=grep\ -nri 
+""""""""""""""""""""""""""""""
+" Tag list (ctags)
+""""""""""""""""""""""""""""""
+let Tlist_Ctags_Cmd = 'ctags'
+let Tlist_Ctags_Cmd = 'D:/tools/Vim/vim81/ctags.exe'
+
+"Tagbar
+let g:tagbar_ctags_bin='D:/tools/Vim/vim81/ctags.exe'
+" end
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q.<CR>
+
+"=============================================================
+set background=dark
+set t_Co=256
+"设置配色方案{
+colorscheme molokai "neon evening molokai solarized molokai github lucius desert
+"colorscheme solarized molokai github lucius desert
+"}
+
+"tab{
+set tabstop=2
+set expandtab
+"}
+
+"path{
+set path=./
+"}
+
+
+
+"{ gvim chinese-normal  but vim not
+set termencoding=cp936
+"}
+"
+
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+"set noexpandtab
+set expandtab
+"set autoindent
+"set cindent
+set cc=80
+set list
+set listchars=tab:>-,trail:-
+
+set nocompatible
+set noswapfile
+set nobackup
+set nowritebackup
+set noundofile
+set nofoldenable
+

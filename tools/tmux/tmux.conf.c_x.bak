@@ -1,0 +1,16 @@
+set -g default-terminal "screen-256color"
+#-- base settings --#
+set -g mode-keys vi
+# prefix key (Ctrl+x)
+set -g prefix ^x
+unbind ^b
+bind x send-prefix
+
+#up
+bind-key k select-pane -U
+#down
+bind-key j select-pane -D
+#left
+bind-key h select-pane -L
+#right
+bind-key l select-pane -R
