@@ -1,0 +1,12 @@
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{SimSun}
+
+#+TITLE: personal todos
+* TODO learn emacs[0/2][0%]                                     :learn_emacs:
+  SCHEDULED: <2020-06-18 四>
+** TODO org-mode[0/3][0%]
+   DEADLINE: <2020-06-18 四>
+*** TODO config
+*** TODO shortkey
+*** TODO gtd
+** TODO learn spacemacs

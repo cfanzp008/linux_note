@@ -1,0 +1,6 @@
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{SimSun}
+
+#+TITLE: home todos
+* shopping 
+* hospital
