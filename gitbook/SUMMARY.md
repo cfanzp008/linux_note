@@ -38,7 +38,7 @@
 * [0. tools](tools/tools.md)
 * [1. shell](tools/shell.md)
 * [2. git](tools/git.md)
-* [3. tmux](tools/tmux.md)
+* [3. gitlab](tools/gitlab.md)
 * [4. vim](tools/vim.md)
     * [1. vim-plug](tools/vim/plug/vim-plug.md)
     * [2. ctrlp](tools/vim/plug/ctrlp.md)
@@ -61,6 +61,7 @@
     * [7. rofi](tools/i3/rofi.md)
 * [9. dotfiles](dotfiles/dotfiles.md)
 * [10. ftp](tools/ftp.md)
+* [11. tmux](tools/tmux.md)
 
 ## 5. 开源
 * [1. github](opensource/github.md)

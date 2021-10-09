@@ -115,7 +115,6 @@ git remote add origin git@gitee.com:cfanzp/linux_note.git
    git commit -am "commit message"
 ```
 
-
 4. Delete the branch
 ```
    git branch -D master
