@@ -1,0 +1,32 @@
+* mysql 常用命令
+** 连接
+*** mysql -uroot -p123456
+** 数据库
+*** show databases;
+** 表
+*** 查看表系统信息
+**** select * from information_schema.TABLES where table_schema='gzzjdb' and table_name='t_account' \G;
+*** 查看所有表构
+**** show tables;
+*** 查看表结构
+**** desc t_account;
+*** 查看表结构详细信息
+**** show full columns from t_account;
+*** 查看表注释
+**** show create table t_account;
+*** 修改表注释
+**** alter table t_account comment '用户表';
+*** 修改表字段注释
+**** alter table t_selfmatch_member modify rank int(11) NOT NULL DEFAULT '0' comment '排行';
+*** 删除表字段
+**** alter table t_selfmatch_member drop rank;
+*** 添加表字段
+**** alter table t_selfmatch_member add rank int(11) NOT NULL DEFAULT '0' comment '排行';
+
+** 存储过程
+*** 查看存储过程
+**** show create procedure p_login;
+**** select * from mysql.proc where db='gzzjdb' and name='p_login' limit 1 \G;
+** 查询
+*** +\G 逐行查看数据
+**** eg: select * from t_account \G;

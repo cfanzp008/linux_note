@@ -1,0 +1,3 @@
+* 安装字体
+  - 复制ttf字体到 /usr/share/fonts/TTF/
+  - 刷新字体: fc-cache -fv
