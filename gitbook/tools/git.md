@@ -91,3 +91,10 @@ git co master
 ```
 git push origin --delete a
 ```
+
+- 修改远程分支地址
+```
+git remote -v
+git remote rm origin
+git remote add origin git@gitee.com:cfanzp/linux_note.git
+```
