@@ -138,3 +138,11 @@ ok: run: sidekiq: (pid 70951) 0s
 ```
 https://baijiahao.baidu.com/s?id=1710986123716406076&wfr=spider&for=pc
 ```
+
+## 迁移项目到gitlab
+```
+git clone --mirror <URL to my OLD repo location>
+cd <New directory where your OLD repo was cloned>
+git remote set-url origin <URL to my NEW repo location>
+git push -f origin
+```
