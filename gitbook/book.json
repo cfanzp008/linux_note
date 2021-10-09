@@ -1,0 +1,34 @@
+{
+    "language" : "zh-hans",
+    "plugins": [
+        "-lunr",
+        "-search",
+        "-sharing",
+        "todo",
+        "include-csv@^0.1.0",
+        "chart",
+        "splitter",
+        "graph@^0.1.0",
+        "mermaid-gb3@2.1.0",
+        "search-pro",
+        "expandable-chapters",
+        "code",
+        "anchor-navigation-ex",
+        "tbfed-pagefooter",
+        "disqus"
+    ],
+    "title": "发布业务逻辑梳理",
+    "pluginsConfig": {
+        "tbfed-pagefooter": {
+            "copyright":"Copyright &copy hmzl 2020",
+            "modify_label": "文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "disqus": {
+            "shortName": "gitbookuse"
+        },
+        "chart":{
+            "type":"c3"
+        }
+    }
+}
