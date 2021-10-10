@@ -57,25 +57,25 @@ git lg
 1. 开发新功能a
 ```mermaid
 sequenceDiagram
-　　　participant gzzj
+　　　participant proj1
 　　　participant a
-　　　gzzj->>a:基于gzzj分支创建一个a分支(step1)
-　　　a->>gzzj:a分支开发完后合并入gzzj分支,并删除a分支(step2)
+　　　proj1->>a:基于proj1分支创建一个a分支(step1)
+　　　a->>proj1:a分支开发完后合并入proj1分支,并删除a分支(step2)
 ```
 
 ```
 step1:
-git br a gzzj
+git br a proj1
 git push origin a
 
 step2:
-git co gzzj
+git co proj1
 git pull
 git co a
-git merge gzzj
+git merge proj1
 git push
 
-git co gzzj
+git co proj1
 git merge a
 git push
 git br -D a
@@ -99,6 +99,40 @@ git remote rm origin
 git remote add origin git@gitee.com:cfanzp/linux_note.git
 ```
 
+### git tag
+命令                                | 作用
+--                                  | --
+git tag                             | 查看标签列表
+git tag -l "v1.0*"                  | 模糊匹配查询
+git tag --list "v0.0*"              | 模糊匹配查询
+git tag -a v1.0 -m "my version 1.0" | 添加附注标签
+git show v1.0                       | 查看标签相关信息
+git tag -lw                         | 创建轻量标签，git show 不会看到额外标签信息
+git tag -a v0.9 9fceb02             | 后期打标签
+git push origin --tags              | 将标签推送到远端
+git tag -d v1.0                     | 删除标签
+git push origin --delete <tagname>  | 删除远端标签
+
+### git diff
+命令                     | 作用
+--                       | --
+git diff                 | 查看差异
+git diff cached          | 查看工作版本和暂存的差异
+git diff HEAD            | 查看工作版本和HEAD的差异
+git diff HEAD^ HEAD      | 查看上上个版本和HEAD的差异
+git diff --stat          | 查看差异的文件列表
+git diff --stat ./client | 查看client目录 差异的文件列表
+git diff > patch         | 使用git diff 打补丁
+git apply --check patch  | 使用补丁,没有任何输出表示可以顺利接受这个补丁
+git apply --reject patch | 使用补丁,冲突会生成.rej文件
+
+### git 回退到某个版本
+1. git reset commit-id
+2. git push origin branch-name --force
+
+
+### 远程分支更新
+1. git remote update origin --prune
 ## 删除所有历史commit,创建一个新仓库
 1. Checkout
 ```
@@ -129,3 +163,4 @@ git remote add origin git@gitee.com:cfanzp/linux_note.git
 ```
    git push -f origin master
 ```
+
