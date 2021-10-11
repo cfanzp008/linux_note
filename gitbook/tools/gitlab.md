@@ -146,3 +146,9 @@ cd <New directory where your OLD repo was cloned>
 git remote set-url origin <URL to my NEW repo location>
 git push -f origin
 ```
+
+## git 修改远程地址
+```
+git remote rm origin
+git remteo add origin git@192.168.2.129:myb/myb.git
+```
