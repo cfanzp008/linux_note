@@ -62,3 +62,17 @@ mysqladmin -u用户名 -p旧密码 password 新密码。
   rm -rf ~/tools/navicat15-premium-cs
 ```
   * [注册机编译](https://gitee.com/yangzhuoming/navicat-keygen/blob/linux/doc/how-to-build.md)
+
+## mysql备份数据库
+```
+[root@ecs-7d02 db]# cat bak_db.sh
+#help:123456
+dt=$(date +%Y%m%d_%H%M%S)
+host=192.168.0.215
+des_file=gzzjdb_bak_$dt.sql
+bak_file=gzzjdb_bak_$dt.tar.gz
+mysqldump -h$host -P8000 -uroot -p gzzjdb --routines --password=GZZJ@123456 > $des_file
+tar -czvf $bak_file $des_file
+mv $bak_file ./bak/
+rm -f $des_file
+```
