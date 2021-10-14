@@ -62,6 +62,7 @@
 * [9. dotfiles](dotfiles/dotfiles.md)
 * [10. ftp](tools/ftp.md)
 * [11. tmux](tools/tmux.md)
+* [12. frp](tools/frp.md)
 
 ## 5. 开源
 * [1. github](opensource/github.md)

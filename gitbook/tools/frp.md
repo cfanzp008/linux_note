@@ -48,9 +48,18 @@ https://gofrp.org/docs/examples/stcp/
 ```
 
 8. 配置开机启动
+
+```
+#systemd配置文件路径:
+ /usr/lib/systemd/system/
+```
+
 - 添加frpc.service
 - 添加frps.service
+- 客户端日志目录:/var/log/frp/frpc.log
+- 服务器日志目录:/var/log/frp/frps.log
 - 日志文件若权限不够,修改frpc.service中的user为root或单独添加一个用户赋予权限
+
 ```
 https://blog.csdn.net/qq_42952331/article/details/104810383
 https://www.cnblogs.com/srczhang/p/12698685.html
