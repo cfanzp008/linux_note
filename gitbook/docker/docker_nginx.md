@@ -111,3 +111,30 @@ stream {
     }
 }
 ```
+
+
+## nginx配置代理上网
+```
+#user nobody;
+worker_processes 1;
+error_log /var/log/nginx/error.log debug;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    resolver 8.8.8.8;
+    server {
+        listen 8088;
+        location / {
+            proxy_pass http://$http_host$request_uri;
+        }
+    }
+```
+
+## windows 安装与使用ngin
+```
+https://www.cnblogs.com/jiangwangxiang/p/8481661.html
+http://nginx.org/en/download.html
+```
