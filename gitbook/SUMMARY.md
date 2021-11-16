@@ -9,6 +9,8 @@
 * [0. expression](language/chat/expression.md)
 * [1. lua](language/lua/lua.md)
 * [2. go](language/go/go.md)
+* [3. python](language/python/python.md)
+    * [1. python joinquant](language/python/python_joinquant.md)
 
 ## 3. 系统
 * [1. os](os/os.md)
