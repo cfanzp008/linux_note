@@ -50,6 +50,38 @@ if g.cost >0 and (g.cost-current_price)/g.cost >=0.10:
 
 ## 常用API
 
+- initialize 初始化函数
+
+```
+def initialize(context):
+    # g为全局变量
+    g.security = "000001.XSHE"
+```
+
+- run_daily/run_weekly/run_monthly 定时运行策略(可选)
+
+```
+def initialize(context):
+    ## func是您自己定义的函数
+    # 按月运行
+    run_monthly(func, monthday, time='9:30', reference_security, force=False)
+    # 按周运行
+    run_weekly(func, weekday, time='9:30', reference_security, force=False)
+    # 每天内何时运行(没有force属性)
+    run_daily(func, time='9:30', reference_security)
+```
+
+- before_trading_start 开盘前运行策略(可选)
+- after_trading_end 收盘后运行策略(可选)
+- on_strategy_end 策略运行结束时调用(可选)
+- on_event 事件回调(可选)
+- handle_data 运行策略(可选)
+
+```
+# 该函数每个单位时间会调用一次, 如果按天回测,则每天调用一次,如果按分钟,则每分钟调用一次。
+def handle_data(context, data):
+    order("000001.XSHE",100)
+```
 
 
 ## demo

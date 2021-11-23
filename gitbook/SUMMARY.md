@@ -66,6 +66,7 @@
 * [11. tmux](tools/tmux.md)
 * [12. frp](tools/frp.md)
 * [13. proxy](tools/proxy/proxy.md)
+* [14. flameshot截图](tools/flameshot.md)
 
 ## 5. 开源
 * [1. github](opensource/github.md)
