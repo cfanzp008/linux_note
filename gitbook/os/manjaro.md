@@ -68,3 +68,8 @@ sudo pacman -S wqy-microhei
 
 8. 安装vmware https://www.jianshu.com/p/de571b44ab60
 9. vmware download:https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html
+
+## 常用软件
+- 声音控制 terminal中运行命令:alsamixer
+- 截图:flameshot
+
