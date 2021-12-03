@@ -81,6 +81,7 @@
 ## 网络安全
 * [1. 网络安全](safe/safe.md)
    * [1. nmap](safe/nmap.md)
+   * [2. hydra](safe/hydra.md)
 
 
 ## 运维监控
