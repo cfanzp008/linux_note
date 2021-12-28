@@ -19,3 +19,16 @@ tar -czvf redis.tar.gz redis
 ```
 ssh root@123.207.126.144 -p22 -i id_rsa
 ```
+
+## ssh无法连接
+- ssh登陆报错“WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!”问题原因及解决方法
+
+```
+删除对应ip的在known_hosts相关信息
+vim /.ssh/known_hosts
+```
+
+- ssh 升级 openssh 8.8sp1
+```
+https://blog.csdn.net/qq_29974229/article/details/120888947
+```
