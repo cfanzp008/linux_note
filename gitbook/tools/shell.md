@@ -1,4 +1,18 @@
 # 常用命令
+## sed批量替换
+- 批量替换单个文件中的内容
+```
+set -i 's/land_logic/runner_logic/g' ./ctp_single.lua
+```
+
+- 批量替换多个文件中的内容
+
+```
+ag land_logic -l |xargs sed -i 's/land_logic/runner_logic/g'
+set -i 's/land_logic/runner_logic/g' `ag land_logic rl ./*.lua`
+```
+
+
 ## tar
 - 打包redis目录
 ```
