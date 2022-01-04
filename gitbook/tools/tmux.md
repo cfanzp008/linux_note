@@ -19,6 +19,12 @@ rename-window myb_dev
 C-b + ,
 ```
 
+## 关闭当前pannel
+```
+C-b + :
+kill-pane
+```
+
 ## 重命名会话(Session)
 ```
 C-b + :
