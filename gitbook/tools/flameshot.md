@@ -40,6 +40,11 @@ apt install flameshot
 apt install flameshot
 ```
 
+- windows 直接下载安装包,下载地址:
+```
+https://github.com/flameshot-org/flameshot/releases/tag/v0.10.2
+```
+
 ## 常用快捷键
 ```
 按PrintScreen键 激活
