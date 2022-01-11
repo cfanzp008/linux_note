@@ -1,7 +1,6 @@
 # Summary
 
 ## 1. 帮助
-* [1. 帮助手册](platform/common/help.md)
 * [2. gitbook帮助](help/gitbook.md)
 * [3. 介绍](README.md)
 
